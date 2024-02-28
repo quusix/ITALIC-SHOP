@@ -13,19 +13,213 @@
 			rel="stylesheet"
 		/>
 		<link
-			href="https://fonts.googleapis.com/css?family=EB+Garamond:regular"
+			href="https://fonts.googleapis.com/css?family=EB+Garamond:regular,500,600,700,800,italic,500italic,600italic,700italic,800italic"
 			rel="stylesheet"
+		/>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
 		/>
 		<title>ITALIC</title>
 	</head>
 	<body>
+		<div id="modalWin" class="modal">
+			<div class="modal_window">
+				<div class="modal__window-image">
+					<img src="./src/img/chain_earrings.svg" alt="" />
+				</div>
+				<button easy-toggle="#modalWin" ease-remove="show" class="btn-close">
+					X
+				</button>
+			</div>
+			<div easy-toggle="#modalWin" ease-remove="show" class="overlay"></div>
+		</div>
+
 		<div class="bundle">
 			<div class="bundle__conteiner">
-				<h2 class="bundle__conteiner-item"><a href="">Bundle up.</a></h2>
-				<h2 class="bundle__conteiner-item"><a href="">Membership</a></h2>
-				<h2 class="bundle__conteiner-item"><a href="">Rewards</a></h2>
+				<div class="bundle__conteiner-item">
+					<span><a href="">BUNDLE UP.</a></span>
+				</div>
+				<div class="bundle__conteiner-item">
+					<span><a href="">MEMBERSHIP</a></span>
+					<span><a href="">REWARDS</a></span>
+				</div>
 			</div>
 		</div>
+		<header>
+			<div class="header__conteiner">
+				<a href=""
+					><img src="/src/img/logo.svg" alt="" class="header__logo"
+				/></a>
+				<nav class="header__conteiner-nav">
+					<ul class="header__conteiner-list animation-link">
+						<li class="header__conteiner-list-item animation-link">
+							<a href="">Featured</a>
+						</li>
+						<li class="header__conteiner-nav-list-item">
+							<a href="">Women</a>
+						</li>
+						<li class="header__conteiner-nav-list-item">
+							<a href="">Men</a>
+						</li>
+						<li class="header__conteiner-nav-list-item">
+							<a href="">Home</a>
+						</li>
+						<li class="header__conteiner-nav-list-item">
+							<a href="">Jewelry</a>
+						</li>
+						<li class="header__conteiner-nav-list-item">
+							<a href="">Beauty</a>
+						</li>
+						<li class="header__conteiner-nav-list-item">
+							<a href="">Travel</a>
+						</li>
+						<li class="header__conteiner-nav-list-item">
+							<a href="">Pets</a>
+						</li>
+					</ul>
+				</nav>
+				<ul class="header__conteiner-list">
+					<li
+						class="header__conteiner-list-item animation-link padding-sign-menu"
+					>
+						<a href="">Sign In</a>
+					</li>
+					<li
+						id="searchButton"
+						class="header__conteiner-list-item padding-sign-menu"
+					>
+						<a href="#"> <img src="./src/img/search_logo.svg" alt="" /></a>
+					</li>
+					<li class="header__conteiner-list-item">
+						<a href="#" clas><img src="./src/img/bucket_logo.svg" alt="" /></a>
+					</li>
+					<li>
+						<input class="header__conteiner-list-input" type="text" />
+					</li>
+				</ul>
+				<div class="header__conteiner-burger-menu">
+					<span></span>
+				</div>
+			</div>
+		</header>
+		<div class="main__title-image">
+			<div class="main__title-title"><h1>Luxury without labels.</h1></div>
+			<div class="main__title-scroll-menu">
+				<div class="slider">
+					<div class="slider__item">
+						<img src="./src/img/main_title_cheese.svg" alt="" />
+					</div>
+					<div class="slider__item">
+						<img src="./src/img/main_title_cheese.svg" alt="" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="learn-more__title">
+			<div class="learn-more__title-text">
+				<p>
+					Unbranded luxury-grade essentials <br />
+					from the same manufacturers as your <br />
+					favorite brands. No logos, no markups.
+				</p>
+			</div>
+			<div class="learn-more__title-button animation-link">
+				<a href="#">Learn More</a>
+			</div>
+		</div>
+		<div class="brend__list">
+			<div class="brend__list-conteiner">
+				<ul class="brend__list-list">
+					<li class="brend__list-item">
+						<img src="./src/img/vogue.svg" alt="" class="brend__list-img" />
+					</li>
+					<li class="brend__list-item">
+						<img src="./src/img/new_york.svg" alt="" class="brend__list-img" />
+					</li>
+					<li class="brend__list-item">
+						<img
+							src="./src/img/the_wall_street_journal.svg"
+							alt=""
+							class="brend__list-img"
+						/>
+					</li>
+					<li class="brend__list-item">
+						<img src="./src/img/FOOD_WINE.svg" alt="" class="brend__list-img" />
+					</li>
+					<li class="brend__list-item">
+						<img src="./src/img/Traveler.svg" alt="" class="brend__list-img" />
+					</li>
+					<li class="brend__list-item">
+						<img
+							src="./src/img/the_guardian.svg"
+							alt=""
+							class="brend__list-img"
+						/>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="card__main">
+			<div class="card__main-item">
+				<img src="./src/img/Skincare_saviors.svg" alt="" />
+				<h2>Skincare Saviors</h2>
+				<p>Upgrade your routine with prestige formulas for every skin type.</p>
+			</div>
+			<div class="card__main-item">
+				<img src="./src/img/make_yourself_at_Home.svg" alt="" />
+				<h2>Make Yourself at Home</h2>
+				<p>
+					Transform your space with plush bath towels and cozy robes to rival
+					any <br />
+					resort.
+				</p>
+			</div>
+		</div>
+		<div class="shop__card">
+			<div class="shop__card-title"></div>
+			<div class="shop__card-cart">
+				<div class="cart-image">
+					<img src="./src/img/chain_earrings.svg" alt="" />
+					<div
+						easy-toggle="#modalWin"
+						easy-class="show"
+						class="shop__card-quick-button"
+					>
+						<img class="" src="./src/img/quick_viev.svg" alt="" />
+						<a easy-toggle="#modalWin" easy-class="show" href="#1"
+							>Quick View</a
+						>
+					</div>
+					<div class="shop__card-new">NEW</div>
+				</div>
+
+				<div class="shop__card-cart-title">
+					<h2 class="">14k Solid Gold Diamond Drop Chain Earrings</h2>
+					<p class="">Same manufacturer as</p>
+					<span>Van Cleef</span>
+					<span>BVLGARI</span>
+					<div class="shop_card-cart-price">
+						<h3>$314</h3>
+						<h3>2 COLORS</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+		<script src="./js/jquery-3.7.1.min.js"></script>
+		<script
+			type="text/javascript"
+			src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+		></script>
+		<script src="https://cdn.jsdelivr.net/npm/easy-toggler@2.2.7"></script>
 		<script src="./js/index.js"></script>
+		<script src="./js/burgermenu.js"></script>
+		<script src="./js/slickslider.js"></script>
+		<script>
+			AOS.init()
+		</script>
 	</body>
 </html>

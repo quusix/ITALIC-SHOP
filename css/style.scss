@@ -1,0 +1,24 @@
+@use './nullstile.scss';
+
+/* Конфигурацыя станицы */
+
+/* Шрифты */
+$font-family-IBM: 'IBM Plex Mono';
+$font-family-Inter: 'Inter';
+$font-family-EB: 'EB Garamond';
+
+/* Размер шрифта */
+$global-font-size: 12px;
+
+/* Цвет шрифта */
+$global-font-color: #000000;
+
+body {
+	font-family: $font-family-EB;
+	font-size: $global-font-size;
+	color: $global-font-color;
+}
+
+.bundle__conteiner {
+	display: flex;
+}

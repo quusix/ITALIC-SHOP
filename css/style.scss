@@ -13,28 +13,33 @@ $global-font-size: 12px;
 /* Цвет шрифта */
 $global-font-color: #000000;
 $global-font-weight: 400;
+
+/* Меню бургер */
 .open {
 	display: flex !important;
 }
+
+/* Модельное окно открытие */
 .modal.show {
 	visibility: visible;
 	z-index: 1000;
 	opacity: 1;
 }
+
+/* Конфигурацыя модельного окна! */
 .modal {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	visibility: hidden;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	visibility: hidden;
 	z-index: -1;
 	opacity: 0;
 	transition: all 0.3s ease-in-out;
-
 	.modal_window {
 		position: relative;
 		z-index: 2;
@@ -44,11 +49,12 @@ $global-font-weight: 400;
 			background: none;
 			border: none;
 			font-size: 20px;
-			top: 0;
-			right: 0;
+			top: 5px;
+			right: 1px;
 			cursor: pointer;
 		}
 	}
+	/*Затемнение оверлей*/
 	.overlay {
 		position: absolute;
 		top: 0;
@@ -59,7 +65,7 @@ $global-font-weight: 400;
 		z-index: 0;
 	}
 }
-
+/* Класс с анимацыей подчеркивания текста */
 .animation-link {
 	a {
 		text-decoration: none;
@@ -81,6 +87,7 @@ $global-font-weight: 400;
 	}
 }
 
+/* Конфигурация страницы */
 body {
 	font-family: $font-family-EB;
 	font-size: $global-font-size;
@@ -133,9 +140,8 @@ header {
 		align-items: center;
 		position: relative;
 
-		.header__conteiner-list {
+		&-list {
 			display: flex;
-
 			&-input {
 				display: none;
 				position: absolute;
@@ -301,13 +307,13 @@ header {
 
 .learn-more__title {
 	text-align: center;
-	.learn-more__title-text {
+	&-text {
 		padding-top: 78px;
 		p {
 			font-size: 34px;
 		}
 	}
-	.learn-more__title-button {
+	&-button {
 		padding-top: 43px;
 		a {
 			text-decoration: none;
@@ -316,6 +322,7 @@ header {
 		}
 	}
 }
+
 .brend__list {
 	display: flex;
 	justify-content: center;
@@ -335,9 +342,9 @@ header {
 .card__main {
 	display: flex;
 	justify-content: center;
-	.card__main-item {
-		padding: 40px;
-		padding-top: 100px;
+	&-item {
+		padding: 130px;
+		padding-top: 200px;
 	}
 	h2 {
 		font-size: 25px;
@@ -348,75 +355,133 @@ header {
 		font-size: 18px;
 	}
 }
+
 .shop__card {
 	display: flex;
-	
-	.cart-image {
-		position: relative;
-	}
-	.shop__card-quick-button {
-		display: flex;
-		justify-content: center;
-		font-size: 18px;
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		left: 0;
-		margin: 0 auto;
-		width: 257px;
-		border: 1px solid black;
-		background-color: #ffffff;
-		cursor: pointer;
-		transition: all 0.3s ease-in-out;
-		&:hover {
-			background-color: rgb(255, 255, 255, 0.4);
-		}
-		a {
-			text-decoration: none;
-			color: #000000;
-		}
-	}
-	.shop__card-new {
-		position: absolute;
-		top: 8px;
-		left: 5px;
-		background-color: #fff;
-		font-size: 15px;
-		padding: 2px;
-		border-radius: 3px;
-	}
-	.shop__card-cart-title {
-		padding: 14px 0px 0px 17px;
-	}
-	.shop__card-cart {
-		width: 289px;
-		height: 435px;
+	justify-content: center;
+	min-width: 0;
 
+	&-title {
 		h2 {
+			font-family: $font-family-EB;
 			font-weight: 400;
-			font-size: 19px;
+			font-size: 36px;
+			line-height: 57px;
+			letter-spacing: 2.4px;
 		}
+
 		p {
-			color: #8c8c8c;
-			font-size: 17px;
-			padding: 5px 0px 10px 0px;
-		}
-		h3 {
-			font-size: 13px;
-			font-family: $font-family-IBM;
-		}
-		span {
-			color: #383230;
 			font-family: $font-family-Inter;
-			font-size: 12px;
+			font-weight: 400;
+			font-size: 15px;
+			line-height: 25px;
 		}
+
+		.shop__card-button {
+			padding-top: 30px;
+			a {
+				text-decoration: none;
+				font-family: $font-family-Inter;
+				font-size: 13px;
+				line-height: 14px;
+				color: #000000;
+				padding: 12px 16px 16px 16px;
+				border: 1px solid #000000;
+			}
+		}
+	}
+	&-slider {
+		width: 50%;
+		position: relative;
+		.slick-arrow {
+			position: absolute;
+			top: 50%;
+			z-index: 10;
+			background: none;
+			border: none;
+			font-size: 0;
+			width: 30px;
+			height: 20px;
+		}
+		.slick-arrow.slick-prev {
+			left: 0;
+			background: url(../src/img/caret-left.png) 0 0 no-repeat;
+			transform: translateY(-50%);
+		}
+		.slick-arrow.slick-next {
+			right: 0;
+			background: url(../src/img/caret-right.png) no-repeat;
+			transform: translateY(-50%);
+		}
+	}
+	&-cart {
+		width: 289px;
+		height: 100%;
 		.shop__card-cart-title {
+			padding: 14px 0px 0px 17px;
 			border: 1px solid #e0dbd2;
-		}
-		.shop_card-cart-price {
-			display: flex;
+			h2 {
+				font-weight: 400;
+				font-size: 19px;
+			}
+			p {
+				color: #8c8c8c;
+				font-size: 17px;
+				padding: 5px 0px 10px 0px;
+			}
 			h3 {
-				padding: 0px 10px 0px 0px;
+				font-size: 13px;
+				font-family: $font-family-IBM;
+			}
+			span {
+				color: #383230;
+				font-family: $font-family-Inter;
+				font-size: 12px;
+			}
+			.shop_card-cart-price {
+				display: flex;
+				h3 {
+					padding: 0px 10px 0px 0px;
+				}
+			}
+		}
+		.cart-image {
+			position: relative;
+			.main-image {
+				width: 100%;
+				height: auto;
+			}
+
+			.shop__card-quick-button {
+				display: flex;
+				justify-content: center;
+				font-size: 18px;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				margin: 0 auto;
+				width: 257px;
+				border: 1px solid black;
+				background-color: #ffffff;
+				cursor: pointer;
+				transition: all 0.3s ease-in-out;
+				&:hover {
+					background-color: rgb(255, 255, 255, 0.4);
+				}
+				a {
+					text-decoration: none;
+					color: #000000;
+				}
+			}
+			.shop__card-new {
+				position: absolute;
+				top: 8px;
+				left: 5px;
+				background-color: #fff;
+				font-size: 15px;
+				padding: 2px;
+				border-radius: 3px;
 			}
 		}
 	}

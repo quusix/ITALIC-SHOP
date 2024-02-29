@@ -447,13 +447,18 @@ header {
 		}
 		.cart-image {
 			position: relative;
+			&:hover {
+				.shop__card-quick-button {
+					display: flex;
+				}
+			}
 			.main-image {
 				width: 100%;
 				height: auto;
 			}
 
 			.shop__card-quick-button {
-				display: flex;
+				display: none;
 				justify-content: center;
 				font-size: 18px;
 				position: absolute;

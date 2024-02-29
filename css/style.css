@@ -531,12 +531,15 @@ header .header__conteiner-nav li a {
 .shop__card-cart .cart-image {
   position: relative;
 }
+.shop__card-cart .cart-image:hover .shop__card-quick-button {
+  display: flex;
+}
 .shop__card-cart .cart-image .main-image {
   width: 100%;
   height: auto;
 }
 .shop__card-cart .cart-image .shop__card-quick-button {
-  display: flex;
+  display: none;
   justify-content: center;
   font-size: 18px;
   position: absolute;

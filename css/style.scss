@@ -342,9 +342,11 @@ header {
 .card__main {
 	display: flex;
 	justify-content: center;
-	&-item {
-		padding: 130px;
-		padding-top: 200px;
+	padding-top: 100px;
+	&-conteiner {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
 	}
 	h2 {
 		font-size: 25px;
@@ -360,8 +362,19 @@ header {
 	display: flex;
 	justify-content: center;
 	min-width: 0;
+	padding-top: 118px;
 
+	.shop__card-conteiner {
+		width: 80%;
+		height: auto;
+		display: flex;
+		justify-content: space-between;
+
+		overflow: hidden;
+	}
 	&-title {
+		width: 40%;
+		height: auto;
 		h2 {
 			font-family: $font-family-EB;
 			font-weight: 400;
@@ -391,8 +404,11 @@ header {
 		}
 	}
 	&-slider {
-		width: 50%;
+		width: 57.7%;
 		position: relative;
+		.shop__card-slider-item {
+			margin-left: 5px;
+		}
 		.slick-arrow {
 			position: absolute;
 			top: 50%;
@@ -447,9 +463,10 @@ header {
 		}
 		.cart-image {
 			position: relative;
+
 			&:hover {
 				.shop__card-quick-button {
-					display: flex;
+					opacity: 1;
 				}
 			}
 			.main-image {
@@ -458,7 +475,7 @@ header {
 			}
 
 			.shop__card-quick-button {
-				display: none;
+				display: flex;
 				justify-content: center;
 				font-size: 18px;
 				position: absolute;
@@ -470,10 +487,8 @@ header {
 				border: 1px solid black;
 				background-color: #ffffff;
 				cursor: pointer;
-				transition: all 0.3s ease-in-out;
-				&:hover {
-					background-color: rgb(255, 255, 255, 0.4);
-				}
+				opacity: 0;
+				transition: all 0.6s ease-in-out;
 				a {
 					text-decoration: none;
 					color: #000000;
@@ -487,6 +502,11 @@ header {
 				font-size: 15px;
 				padding: 2px;
 				border-radius: 3px;
+			}
+			&:hover {
+				.shop__card-quick-button {
+					display: flex;
+				}
 			}
 		}
 	}

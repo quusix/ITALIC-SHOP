@@ -45,6 +45,7 @@ $(document).ready(function () {
 		autoplay: true,
 		slidesToShow: 3,
 		draggable: false,
+		variableWidth: true,
 	})
 })
 

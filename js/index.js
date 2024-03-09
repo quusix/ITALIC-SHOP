@@ -7,6 +7,7 @@ var image2 = document.querySelector('.shop__card-cart-image-two')
 var image3 = document.querySelector('.shop__card-cart-image-three')
 var image4 = document.querySelector('.shop__card-cart-image-four')
 var image5 = document.querySelector('.shop__card-cart-image-five')
+var image6 = document.querySelector('.shop__card-cart-image-jacket')
 
 image1.addEventListener('click', function () {
 	image.src = './src/img/chain_earrings.svg'
@@ -23,7 +24,9 @@ image4.addEventListener('click', function () {
 image5.addEventListener('click', function () {
 	image.src = './src/img/k20Braslet.png'
 })
-
+image6.addEventListener('click', function () {
+	image.src = '../src/img/aura_contour_jacket.svg'
+})
 searcbutton.addEventListener('click', function () {
 	if (searchInput.style.display === 'none') {
 		searchInput.style.display = 'block'
@@ -46,6 +49,14 @@ $(document).ready(function () {
 		slidesToShow: 3,
 		draggable: false,
 		variableWidth: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 2,
+				},
+			},
+		],
 	})
 })
 

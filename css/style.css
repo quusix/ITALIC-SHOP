@@ -451,14 +451,16 @@ header .header__conteiner-nav li a {
   padding-top: 118px;
 }
 .shop__card .shop__card-conteiner {
-  width: 80%;
   height: auto;
   display: flex;
-  justify-content: space-between;
+  width: 100%;
+  justify-content: space-around;
   overflow: hidden;
 }
+.shop__card .shop__card-conteiner .shop__card-conteiner-title {
+  display: flex;
+}
 .shop__card-title {
-  width: 40%;
   height: auto;
 }
 .shop__card-title h2 {
@@ -467,6 +469,7 @@ header .header__conteiner-nav li a {
   font-size: 36px;
   line-height: 57px;
   letter-spacing: 2.4px;
+  transition: all 0.3s ease-in-out;
 }
 .shop__card-title p {
   font-family: "Inter";
@@ -485,9 +488,15 @@ header .header__conteiner-nav li a {
   color: #000000;
   padding: 12px 16px 16px 16px;
   border: 1px solid #000000;
+  transition: all 0.3s ease-in-out;
+}
+.shop__card-title .shop__card-button a:hover {
+  background-color: #b28263;
+  color: white;
+  border: 1px solid white;
 }
 .shop__card-slider {
-  width: 57.7%;
+  width: 880px;
   position: relative;
 }
 .shop__card-slider .shop__card-slider-item {
@@ -515,11 +524,12 @@ header .header__conteiner-nav li a {
 }
 .shop__card-cart {
   width: 289px;
-  height: 100%;
 }
 .shop__card-cart .shop__card-cart-title {
   padding: 14px 0px 0px 17px;
   border: 1px solid #e0dbd2;
+  width: 289px;
+  height: 177px;
 }
 .shop__card-cart .shop__card-cart-title h2 {
   font-weight: 400;
@@ -586,4 +596,55 @@ header .header__conteiner-nav li a {
 }
 .shop__card-cart .cart-image:hover .shop__card-quick-button {
   display: flex;
+}
+@media (max-width: 800px) {
+  .shop__card .shop__card-title {
+    text-align: center;
+  }
+  .shop__card .shop__card-conteiner {
+    flex-direction: column;
+  }
+}
+
+.liner {
+  padding-top: 89px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.liner img {
+  padding: 10px;
+}
+.liner .line {
+  width: 600px;
+  height: 2px;
+  background-color: black;
+}
+
+.catalog__conteiner {
+  display: flex;
+  justify-content: center;
+}
+.catalog__conteiner .catalog {
+  width: 1300px;
+  height: 900px;
+}
+.catalog__conteiner .catalog .catalog__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.catalog__conteiner .catalog .catalog__galery {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.catalog__conteiner .catalog .catalog__galery .catolog__more-img {
+  display: flex;
+  flex-wrap: wrap;
+  width: 700px;
+  height: auto;
+}
+.catalog__conteiner .catalog .catalog__galery .catolog__more-img .padding_cart {
+  margin: 10px;
 }/*# sourceMappingURL=style.css.map */

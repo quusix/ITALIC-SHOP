@@ -365,15 +365,16 @@ header {
 	padding-top: 118px;
 
 	.shop__card-conteiner {
-		width: 80%;
 		height: auto;
 		display: flex;
-		justify-content: space-between;
-
+		width: 100%;
+		justify-content: space-around;
 		overflow: hidden;
+		.shop__card-conteiner-title {
+			display: flex;
+		}
 	}
 	&-title {
-		width: 40%;
 		height: auto;
 		h2 {
 			font-family: $font-family-EB;
@@ -381,6 +382,7 @@ header {
 			font-size: 36px;
 			line-height: 57px;
 			letter-spacing: 2.4px;
+			transition: all 0.3s ease-in-out;
 		}
 
 		p {
@@ -392,6 +394,7 @@ header {
 
 		.shop__card-button {
 			padding-top: 30px;
+
 			a {
 				text-decoration: none;
 				font-family: $font-family-Inter;
@@ -400,11 +403,17 @@ header {
 				color: #000000;
 				padding: 12px 16px 16px 16px;
 				border: 1px solid #000000;
+				transition: all 0.3s ease-in-out;
+				&:hover {
+					background-color: #b28263;
+					color: white;
+					border: 1px solid white;
+				}
 			}
 		}
 	}
 	&-slider {
-		width: 57.7%;
+		width: 880px;
 		position: relative;
 		.shop__card-slider-item {
 			margin-left: 5px;
@@ -432,10 +441,12 @@ header {
 	}
 	&-cart {
 		width: 289px;
-		height: 100%;
+
 		.shop__card-cart-title {
 			padding: 14px 0px 0px 17px;
 			border: 1px solid #e0dbd2;
+			width: 289px;
+			height: 177px;
 			h2 {
 				font-weight: 400;
 				font-size: 19px;
@@ -506,6 +517,60 @@ header {
 			&:hover {
 				.shop__card-quick-button {
 					display: flex;
+				}
+			}
+		}
+	}
+	@media (max-width: 800px) {
+		.shop__card-title {
+			text-align: center;
+		}
+
+		.shop__card-conteiner {
+			flex-direction: column;
+		}
+	}
+}
+
+.liner {
+	padding-top: 89px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	img {
+		padding: 10px;
+	}
+	.line {
+		width: 600px;
+		height: 2px;
+		background-color: black;
+	}
+}
+
+.catalog__conteiner {
+	display: flex;
+	justify-content: center;
+
+	.catalog {
+		width: 1300px;
+		height: 900px;
+		.catalog__title {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		.catalog__galery {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.catolog__more-img {
+				display: flex;
+				flex-wrap: wrap;
+				width: 700px;
+				height: auto;
+				.padding_cart {
+					margin: 10px;
 				}
 			}
 		}

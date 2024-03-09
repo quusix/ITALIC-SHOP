@@ -28,16 +28,16 @@ image5.addEventListener('click', function () {
 	image.src = './src/img/k20Braslet.png'
 })
 image6.addEventListener('click', function () {
-	image.src = '../src/img/aura_contour_jacket.svg'
+	image.src = './src/img/aura_contour_jacket.svg'
 })
 image7.addEventListener('click', function () {
-	image.src = '../src/img/aura_active_sports_tank.svg'
+	image.src = './src/img/aura_active_sports_tank.svg'
 })
 image8.addEventListener('click', function () {
-	image.src = '../src/img/aura_active_bodysuit.svg'
+	image.src = './src/img/aura_active_bodysuit.svg'
 })
 image9.addEventListener('click', function () {
-	image.src = '../src/img/aura_racerback_sports_bra.svg'
+	image.src = './src/img/aura_racerback_sports_bra.svg'
 })
 
 searcbutton.addEventListener('click', function () {

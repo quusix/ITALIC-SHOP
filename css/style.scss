@@ -550,7 +550,7 @@ header {
 .catalog__conteiner {
 	display: flex;
 	justify-content: center;
-
+	padding-top: 50px;
 	.catalog {
 		width: 1300px;
 		height: 900px;
@@ -558,6 +558,35 @@ header {
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
+		}
+		.catalog__title {
+			h2 {
+				font-size: 35px;
+				font-weight: 400;
+			}
+			h3 {
+				font-family: $font-family-Inter;
+				font-size: 18px;
+				font-weight: 400;
+			}
+			.catalog__title-button-block {
+				padding: 15px;
+				border: 1px solid black;
+				margin-right: 30px;
+				transition: all 0.6s ease;
+				&:hover {
+					background-color: #b28263;
+					box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+					a {
+						color: white;
+					}
+				}
+				a {
+					text-decoration: none;
+					color: black;
+					font-size: 19px;
+				}
+			}
 		}
 		.catalog__galery {
 			display: flex;
@@ -570,7 +599,7 @@ header {
 				width: 700px;
 				height: auto;
 				.padding_cart {
-					margin: 10px;
+					margin: 30px;
 				}
 			}
 		}

@@ -8,6 +8,9 @@ var image3 = document.querySelector('.shop__card-cart-image-three')
 var image4 = document.querySelector('.shop__card-cart-image-four')
 var image5 = document.querySelector('.shop__card-cart-image-five')
 var image6 = document.querySelector('.shop__card-cart-image-jacket')
+var image7 = document.querySelector('.shop__card-cart-image-tank')
+var image8 = document.querySelector('.shop__card-cart-image-bodysuit')
+var image9 = document.querySelector('.shop__card-cart-image-bra')
 
 image1.addEventListener('click', function () {
 	image.src = './src/img/chain_earrings.svg'
@@ -27,42 +30,51 @@ image5.addEventListener('click', function () {
 image6.addEventListener('click', function () {
 	image.src = '../src/img/aura_contour_jacket.svg'
 })
+image7.addEventListener('click', function () {
+	image.src = '../src/img/aura_active_sports_tank.svg'
+})
+image8.addEventListener('click', function () {
+	image.src = '../src/img/aura_active_bodysuit.svg'
+})
+image9.addEventListener('click', function () {
+	image.src = '../src/img/aura_racerback_sports_bra.svg'
+})
+
 searcbutton.addEventListener('click', function () {
 	if (searchInput.style.display === 'none') {
 		searchInput.style.display = 'block'
 	} else {
 		searchInput.style.display = 'none'
 	}
-})
-$(document).ready(function () {
-	$('.slider').slick({
-		arrows: false,
-		dots: true,
-		autoplay: true,
-	})
-})
-$(document).ready(function () {
-	$('.shop__card-slider').slick({
-		arrows: true,
-		dots: false,
-		autoplay: true,
-		slidesToShow: 3,
-		draggable: false,
-		variableWidth: true,
-		responsive: [
-			{
-				breakpoint: 768,
-				settings: {
-					slidesToShow: 2,
+}),
+	$(document).ready(function () {
+		$('.slider').slick({
+			arrows: false,
+			dots: true,
+			autoplay: true,
+		})
+	}),
+	$(document).ready(function () {
+		$('.shop__card-slider').slick({
+			arrows: true,
+			dots: false,
+			autoplay: true,
+			slidesToShow: 3,
+			draggable: false,
+			variableWidth: true,
+			responsive: [
+				{
+					breakpoint: 768,
+					settings: {
+						slidesToShow: 2,
+					},
 				},
-			},
-		],
-	})
-})
-
-document
-	.querySelector('.header__conteiner-burger-menu')
-	.addEventListener('click', function () {
-		this.classList.toggle('active')
-		document.querySelector('.header__conteiner-nav').classList.toggle('open')
-	})
+			],
+		})
+	}),
+	document
+		.querySelector('.header__conteiner-burger-menu')
+		.addEventListener('click', function () {
+			this.classList.toggle('active')
+			document.querySelector('.header__conteiner-nav').classList.toggle('open')
+		})
